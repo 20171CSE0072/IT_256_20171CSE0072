@@ -1,6 +1,4 @@
-﻿HII
- 20171CSE0072
- 
-Section 2
-Presidency University
-School of Engineering
+HELLO 
+WASSUP
+
+HOW U
