@@ -1,0 +1,188 @@
+<!--Design a Calculator to perform Addition,Subtraction,Division and Multiplication . Create two Textbox's for input, a button for each of the above operation.On click of the button the result should be displayed on screen. Negative number not allowed,zero not allowed for division and multiplication-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IT </title>
+<style>
+span{
+color:red;
+}
+</style>
+</head>
+<body>
+<h1>CALCULATOR</h1>
+<div>
+<label for="firstNumber">Enter first number: <span>*</span></label>
+<input type="number" id="fno" pattern="[1-9]" required>
+<br>
+<br>
+<label for="secondNumber">Enter second number: <span>*</span></label>
+<input type="number" id="sno" pattern="[1-9]" required>
+<br>
+<br>
+<button onclick="addition();">ADD</button><span id="add"></span>
+<br>
+<br>
+<button onclick="subtraction();">SUBTRACT</button><span id="sub"></span>
+<br>
+<br>
+<button onclick="multiplication();">MULTIPLY</button><span id="mul"></span>
+<br>
+<br>
+<button onclick="division();">DIVIDE</button><span id="div"></span>
+<script>
+function addition(){
+var n1=Number(document.getElementById("fno").value);
+var n2=Number(document.getElementById("sno").value);
+document.getElementById("addition").innerHTML=" The sum is: "+(n1+n2);
+}
+function subtraction(){
+var n1=Number(document.getElementById("fno").value);
+var n2=Number(document.getElementById("sno").value);
+document.getElementById("subtraction").innerHTML=" The difference is: "+(n1-n2);
+}
+function multiplication(){
+var n1=Number(document.getElementById("fno").value);
+var n2=Number(document.getElementById("sno").value);
+if(n1<=0||n2<=0)
+document.getElementById("multiplication").innerHTML=" Invalid."
+else
+document.getElementById("multiplication").innerHTML=" The product is: "+(n1*n2);
+}
+function division(){
+var n1=Number(document.getElementById("fno").value);
+var n2=Number(document.getElementById("sno").value);
+if(n1<=0||n2<=0)
+document.getElementById("division").innerHTML=" Invalid ."
+else
+document.getElementById("division").innerHTML=" The quotient is: "+(n1/n2);
+}
+</script>
+</div>
+</body>
+</html>
+
+
+
+
+=======================================================================================================================================================================
+<!--write a simple javscript to read and print your name using prompt dialog box-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IT</title>
+</head>
+<body onload="f1()">
+<script>
+function f1(){
+let cname = prompt("Enter your name");
+if(cname!=""&&cname!=null)
+document.write("Your name is: "+cname);
+else
+f1();
+}
+</script>
+</body>
+</html>
+=======================================================================================================================================================================
+<!--write a javascript code to confirm your name using prompt and confirm boxes-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IT</title>
+</head>
+<body onload="f1()">
+<script>
+function f1(){
+var cname = prompt("Enter your name");
+if(cname!=null&&cname!=""){
+if(window.confirm(cname+" is your name right?")){
+document.write("Hi "+cname+"!");
+}
+else{
+f1();
+}}
+else{
+f1();
+}
+}
+</script>
+</body>
+</html>
+=======================================================================================================================================================================
+<!--write a javascrpt code to read and print 10 number from user using prompt-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IT</title>
+</head>
+<body onload="f1()">
+<script>
+function f1(){
+var arr=[],num;
+for(let i=0;i<10;i++)
+arr[i]=prompt("Enter "+(i+1)+" number");
+document.write("Entered array of numbers is : "+arr);
+}
+</script>
+</body>
+</html>
+=======================================================================================================================================================================
+<!--write a javascript code to read two numbers and print the sum-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IT </title>
+</head>
+<body onload="f1()">
+<script>
+function f1(){
+var n1=0,n2=0;
+n1=Number(prompt("Enter the first number."));
+n2=Number(prompt("Enter the second number."));
+document.write("The sum of "+n1+" and "+n2+" is: "+(n1+n2));
+}
+</script>
+</body>
+</html>
+=======================================================================================================================================================================
+<!--write a javascript code to print your name 5 times on a button click-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IT Assignment</title>
+<style>
+span{
+color:red;
+}
+</style>
+</head>
+<body>
+<label for="Name">Enter your Name: <span>*</span></label>
+<input type="text" id="fname" required>
+<button onclick="function1()">SUBMIT</button>
+<p id="para"></p>
+<script>
+function function1(){
+var pname="";
+var name=document.getElementById("fname").value;
+for(let i=0;i<5;i++){
+pname+=name+"<br>";
+}
+document.getElementById("para").innerHTML=pname;
+}
+</script>
+</body>
+</html>
